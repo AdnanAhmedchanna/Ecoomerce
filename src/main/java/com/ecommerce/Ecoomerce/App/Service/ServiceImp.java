@@ -1,6 +1,6 @@
 package com.ecommerce.Ecoomerce.App.Service;
 
-import com.ecommerce.Ecoomerce.App.Repo.Repositry;
+import com.ecommerce.Ecoomerce.App.Repo.UserRepo;
 import com.ecommerce.Ecoomerce.App.model.UserDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class ServiceImp {
     @Autowired
-    public Repositry repo;
+    public UserRepo repo;
     @Transactional
     public UserDetails saveUser(UserDetails userDetails){
         return repo.save(userDetails);
